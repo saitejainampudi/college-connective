@@ -1,5 +1,8 @@
 
-import { FileText, MessageSquare, Vote, Calendar } from "lucide-react";
+import { 
+  Vote, MessageSquare, FileText, Calendar,
+  Heart, Building2, Scale, Settings
+} from "lucide-react";
 
 const quickAccessItems = [
   {
@@ -22,9 +25,33 @@ const quickAccessItems = [
   },
   {
     title: "Facilities",
-    icon: Calendar,
+    icon: Building2,
     description: "Book campus facilities",
     link: "/facilities",
+  },
+  {
+    title: "Health & Leave",
+    icon: Heart,
+    description: "Health reports and leave management",
+    link: "/health",
+  },
+  {
+    title: "Academic Integrity",
+    icon: Scale,
+    description: "View academic records and appeals",
+    link: "/academic",
+  },
+  {
+    title: "Book Facility",
+    icon: Calendar,
+    description: "Reserve campus spaces",
+    link: "/facilities/book",
+  },
+  {
+    title: "Settings",
+    icon: Settings,
+    description: "Manage your preferences",
+    link: "/settings",
   },
 ];
 
