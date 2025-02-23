@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { InputOTP, InputOTPGroup, InputOTPSlot } from "@/components/ui/input-otp";
 import { Label } from "@/components/ui/label";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Auth = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -27,7 +28,14 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-background relative">
+      <Link 
+        to="/" 
+        className="absolute top-4 left-4 flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <ArrowLeft className="h-4 w-4" />
+        Back to Home
+      </Link>
       <Card className="w-full max-w-md p-6">
         <Tabs defaultValue="login" className="w-full">
           <TabsList className="grid w-full grid-cols-2">
