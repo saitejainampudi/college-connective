@@ -1,17 +1,10 @@
 
-import { Bell, Search, User, Sun, Moon } from "lucide-react";
+import { Bell, Search, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 export function Header() {
   const navigate = useNavigate();
-  const [isDark, setIsDark] = useState(true);
-
-  const toggleTheme = () => {
-    setIsDark(!isDark);
-    document.documentElement.classList.toggle('dark');
-  };
 
   return (
     <header className="fixed top-0 right-0 left-0 h-16 bg-card/80 backdrop-blur-lg border-b border-white/10 z-30 px-6">
@@ -27,14 +20,6 @@ export function Header() {
           </div>
         </div>
         <div className="flex items-center space-x-4">
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={toggleTheme}
-            className="rounded-full"
-          >
-            {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
           <button className="p-2 rounded-lg hover:bg-white/5">
             <Bell className="h-5 w-5" />
           </button>
